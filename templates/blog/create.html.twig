@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Create Blog{% endblock %}
+{% form_theme form 'bootstrap_5_layout.html.twig' %}
+{% block body %}
+<div class="container-fluid bg-light py-3">
+    <div class="container">
+        <div class="text-center">
+            <h1>Create Blog </h1>
+        </div>
+        <div class="row">            
+            <div class="col-md-12">
+                
+                    {{form_start(form)}}
+                    {{form_widget(form)}}
+                    <div class="form-group pt-3"><button type="submit" class="btn btn-primary">Submit</button></div>
+                   
+                {{form_end(form)}}
+            </div>
+           
+            
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+
+{% block javascripts %}
+{% endblock %}

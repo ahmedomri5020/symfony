@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Home{% endblock %}</title>
+        <link href="{{asset("css/bootstrap.min.css")}}" rel="stylesheet" >
+        <link rel="icon" href="{{asset("static/favicon.png")}}" size="32*32">
+ 
+        {% block stylesheets %}
+        {% endblock %}     
+        
+    </head>
+    <body>
+        {{include("navbar.html.twig")}}
+        {% block body %}{% endblock %}
+        <script async   src="{{asset("js/jquery-3.7.0.min.js")}}" ></script>
+        <script async src="{{asset("js/bootstrap.bundle.min.js")}}" ></script>
+        {% block javascripts %}
+        {% endblock %}
+    </body>
+</html>
